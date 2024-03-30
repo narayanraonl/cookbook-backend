@@ -20,8 +20,8 @@ app.use(cors({credentials:true,origin:['http://localhost:3000','https://cookbook
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose.connect("mongodb://127.0.0.1:27017/recipeDB").then(() => console.log("Connected to MongoDB")).catch(console.error);
-// mongoose.connect("mongodb+srv://narayan_nl:CIgx5Ro8KCS7nUvT@cluster0.gxcfelm.mongodb.net/recipeDB?retryWrites=true&w=majority").then(()=>console.log("Connected to MongoDB")).catch(console.error);
+// mongoose.connect("mongodb://127.0.0.1:27017/recipeDB").then(() => console.log("Connected to MongoDB")).catch(console.error);
+mongoose.connect("mongodb+srv://narayan_nl:CIgx5Ro8KCS7nUvT@cluster0.gxcfelm.mongodb.net/recipeDB?retryWrites=true&w=majority").then(()=>console.log("Connected to MongoDB")).catch(console.error);
 
 const recipeSchema= new mongoose.Schema({
     title:String,
