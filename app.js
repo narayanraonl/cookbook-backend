@@ -207,9 +207,8 @@ app.get('/authorized', (req,res) => {
 })
 
 
-app.listen(4000,function(req,res){
-    console.log("Server running at 4000");
-})
+app.listen(process.env.PORT || 4000, () => console.log(Server running on ${process.env.PORT || 4000}))
+
 
 
 app.post('/logout', (req,res) => {
